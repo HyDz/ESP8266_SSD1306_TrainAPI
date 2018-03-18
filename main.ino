@@ -31,7 +31,7 @@ WiFiClientSecure client;
 char hostAPI[] = "api-ratp.pierre-grimaud.fr";
 
 //Request send to the API Server
-char getRequest[] = "/v3/schedules/rers/B/bagneux/A+R?_format=json";
+char getRequest[] = "/v3/schedules/rers/B/denfert+rochereau/A+R?_format=json";
 //Another example request try directly on the website they're swagger so you can directly test your requests
 //char getRequest[] = "/v3/schedules/metros/14/bercy/A+R";
 
