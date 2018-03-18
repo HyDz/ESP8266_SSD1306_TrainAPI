@@ -174,7 +174,7 @@ void parseAPI(String request) {
 #ifdef DEBUG
         Serial.println(resulted_code);
 #endif
-        if (error_code.length() > 2) {
+        if (error_code.length() > 2) { // Check if they're an error code Code 500 = No Trains
           printErrorAPI("Erreur", error_code);
           return;
         }
@@ -190,7 +190,7 @@ void parseAPI(String request) {
           Serial.println(result_schedules_destination);
 #endif
           String resulted_message = resulted_schedules["message"].as<String>();
-          if ( resulted_message.length() <= 6) {
+          if ( resulted_message.length() <= 6) {  // Only Print train with a time and skip No Stop trains
             if (yPos < 61) {
 #ifdef DEBUG
               Serial.print("yPos: ");
